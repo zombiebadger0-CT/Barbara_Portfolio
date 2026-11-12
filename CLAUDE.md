@@ -17,6 +17,7 @@ Guidance for Claude Code when working in this repository.
 - This repository is a **Docusaurus portfolio website**.
 - The goal is a working, publicly hosted site that the user can link to from their resume and share with recruiters during a job search.
 - Everything on the site should look polished and professional, because recruiters and hiring managers will see it.
+- **Hosting:** the site will be hosted on **GitHub Pages**. Docusaurus builds the site, and GitHub Pages publishes it online.
 
 ## What the portfolio should showcase
 
