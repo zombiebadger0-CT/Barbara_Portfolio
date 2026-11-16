@@ -13,9 +13,7 @@ AI-Enabled Workflows | Regulated & SaaS Products
 <a
   className="button button--primary button--lg margin-vert--md"
   href={require('@site/static/files/barbara-morach-resume.pdf').default}
-  download="Barbara-Morach-Resume.pdf">
-  Download PDF Copy
-</a>
+  download="Barbara-Morach-Resume.pdf">Download PDF Copy</a>
 
 ## Summary
 
