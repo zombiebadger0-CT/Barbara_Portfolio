@@ -6,7 +6,7 @@ description: Resume of Barbara Morach, Product Enablement and Knowledge Base Man
 # Barbara Morach
 
 **Product Enablement & Knowledge Base Manager | Senior Technical Writer**<br />
-AI-Enabled Workflows | Regulated & SaaS Products
+**AI-Enabled Workflows | Regulated & SaaS Products**
 
 (860) 992-6620 • [morach.barbara@gmail.com](mailto:morach.barbara@gmail.com) • [linkedin.com/in/barbaramorach](https://www.linkedin.com/in/barbaramorach) • Glastonbury, CT
 
