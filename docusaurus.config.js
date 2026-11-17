@@ -55,6 +55,20 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      // The Resume section is a second docs section, so it gets its own
+      // left sidebar and Previous/Next buttons, like the Portfolio.
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'resume',
+        path: 'resume',
+        routeBasePath: 'resume',
+        sidebarPath: './sidebarsResume.js',
+      },
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -72,7 +86,13 @@ const config = {
         },
         items: [
           {to: '/about', label: 'About', position: 'right'},
-          {to: '/resume', label: 'Resume', position: 'right'},
+          {
+            type: 'docSidebar',
+            docsPluginId: 'resume',
+            sidebarId: 'resumeSidebar',
+            label: 'Resume',
+            position: 'right',
+          },
           {
             type: 'docSidebar',
             sidebarId: 'portfolioSidebar',

@@ -11,9 +11,9 @@ const sections = [
     text: 'Who I am, how I work, and what I care about in documentation.',
   },
   {
-    title: 'Resume',
+    title: 'Resume and Recommendations',
     to: '/resume',
-    text: 'My experience, skills, tools, and education.',
+    text: 'My experience, skills, and tools, and coworker recommendations pulled from LinkedIn.',
   },
   {
     title: 'Portfolio',
