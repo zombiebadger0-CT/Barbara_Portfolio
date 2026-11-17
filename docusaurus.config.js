@@ -13,9 +13,10 @@ const config = {
     v4: true,
   },
 
-  // GitHub Pages project site: https://zombiebadger0-ct.github.io/Barbara_Portfolio/
-  url: 'https://zombiebadger0-ct.github.io',
-  baseUrl: '/Barbara_Portfolio/',
+  // GitHub Pages site served from the custom domain https://barbaramorach.me/
+  // (the domain's DNS is managed in Cloudflare; static/CNAME tells GitHub Pages the domain).
+  url: 'https://barbaramorach.me',
+  baseUrl: '/',
   organizationName: 'zombiebadger0-CT',
   projectName: 'Barbara_Portfolio',
 
