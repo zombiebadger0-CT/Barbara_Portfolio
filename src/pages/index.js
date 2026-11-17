@@ -11,8 +11,8 @@ const sections = [
     text: 'Who I am, how I work, and what I care about in documentation.',
   },
   {
-    title: 'Resume and Recommendations',
-    to: '/resume',
+    title: 'CV and Recommendations',
+    to: '/cv',
     text: 'My experience, skills, and tools, and coworker recommendations pulled from LinkedIn.',
   },
   {
@@ -47,8 +47,8 @@ function Banner() {
             <Link className={styles.primaryButton} to="/portfolio">
               View my portfolio
             </Link>
-            <Link className={styles.secondaryButton} to="/resume">
-              Read my resume
+            <Link className={styles.secondaryButton} to="/cv">
+              Read my CV
             </Link>
           </div>
         </div>

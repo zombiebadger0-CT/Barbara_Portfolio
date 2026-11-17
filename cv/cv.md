@@ -1,7 +1,7 @@
 ---
-title: Resume
+title: CV
 sidebar_position: 2
-description: Resume of Barbara Morach, Product Enablement and Knowledge Base Manager and Senior Technical Writer.
+description: CV of Barbara Morach, Product Enablement and Knowledge Base Manager and Senior Technical Writer.
 ---
 
 # Barbara Morach
@@ -13,8 +13,8 @@ description: Resume of Barbara Morach, Product Enablement and Knowledge Base Man
 
 <a
   className="button button--primary button--lg margin-vert--md"
-  href={require('@site/static/files/barbara-morach-resume.pdf').default}
-  download="Barbara-Morach-Resume.pdf">Download PDF Copy</a>
+  href={require('@site/static/files/barbara-morach-cv.pdf').default}
+  download="Barbara-Morach-CV.pdf">Download PDF Copy</a>
 
 ## Summary
 

@@ -68,3 +68,88 @@
 .footer__title {
   color: var(--ifm-color-primary-darkest);
 }
+
+/* Recommendations: the quote is the focus; the attribution follows it in smaller type */
+.recommendation {
+  margin: 0 0 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--site-border);
+}
+
+.recommendation:last-of-type {
+  border-bottom: none;
+}
+
+.recommendation blockquote {
+  margin: 0 0 1rem;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 4px solid var(--ifm-color-primary);
+  background: none;
+  color: var(--ifm-font-color-base);
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+.recommendation blockquote p {
+  margin-bottom: 1rem;
+}
+
+.recommendation blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.recommendation figcaption {
+  padding-left: 1.25rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.recommendation__name,
+.recommendation__title,
+.recommendation__meta {
+  display: block;
+}
+
+.recommendation__name {
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+}
+
+.recommendation__name::before {
+  content: '— ';
+}
+
+.recommendation__title {
+  color: var(--ifm-color-emphasis-700);
+}
+
+.recommendation__meta {
+  color: var(--ifm-color-emphasis-600);
+  font-style: italic;
+}
+
+
+/* Recommendations intro: extra space and the same divider line used
+   between recommendations, so the intro reads as an intro, not a callout */
+.recommendations-intro {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--site-border);
+}
+
+/* Previous/Next links at the bottom of Portfolio and CV pages.
+   Styled to match the clickable cards on the section landing pages. */
+.pagination-nav__link {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 15%);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
+}
+
+.pagination-nav__label {
+  color: var(--ifm-color-primary-darkest);
+}

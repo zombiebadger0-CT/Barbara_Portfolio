@@ -8,7 +8,7 @@ My technical writing portfolio, built with [Docusaurus](https://docusaurus.io/).
 | --------- | ------------ | ----------------------------- |
 | Homepage  | `/`          | `src/pages/index.js`          |
 | About     | `/about`     | `src/pages/about.md`          |
-| Resume    | `/resume`    | `src/pages/resume.md`         |
+| CV        | `/cv`        | `cv/cv.md`                    |
 | Portfolio | `/portfolio` | Markdown files in `docs/`     |
 | Blog      | `/blog`      | Markdown files in `blog/`     |
 
