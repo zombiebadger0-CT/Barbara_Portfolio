@@ -13,9 +13,9 @@ const config = {
     v4: true,
   },
 
-  // Change these when you choose where to host the site.
+  // GitHub Pages project site: https://zombiebadger0-ct.github.io/Barbara_Portfolio/
   url: 'https://zombiebadger0-ct.github.io',
-  baseUrl: '/',
+  baseUrl: '/Barbara_Portfolio/',
   organizationName: 'zombiebadger0-CT',
   projectName: 'Barbara_Portfolio',
 
@@ -67,8 +67,8 @@ const config = {
       navbar: {
         title: 'Barbara',
         logo: {
-          alt: 'Barbara logo',
-          src: 'img/logo.svg',
+          alt: 'Barbara Morach',
+          src: 'img/headshot-small.jpg',
         },
         items: [
           {to: '/about', label: 'About', position: 'right'},

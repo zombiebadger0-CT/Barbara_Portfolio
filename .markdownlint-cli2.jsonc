@@ -1,0 +1,20 @@
+// markdownlint settings: checks Markdown formatting.
+// Rule reference: https://github.com/DavidAnson/markdownlint#rules--aliases
+{
+  "config": {
+    "default": true,
+    // Line length: prose is easier to edit without hard line breaks.
+    "MD013": false,
+    // Inline HTML: Docusaurus pages use JSX/HTML (for example, buttons and <br />).
+    "MD033": false,
+    // Docusaurus treats the front-matter "title" and the page's "# Heading" as the same
+    // title, so only count "#" headings when checking for duplicate top-level headings.
+    "MD025": { "front_matter_title": "" },
+    // Italic lines (for example, job dates on the resume) are intentional, not headings.
+    "MD036": false,
+    // MDX comments like {/* ... */} look like emphasis to markdownlint.
+    "MD037": false
+  },
+  "globs": ["**/*.{md,mdx}"],
+  "ignores": ["node_modules/**", "build/**", ".docusaurus/**", "templates/**", ".github/**"]
+}

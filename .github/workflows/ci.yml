@@ -1,0 +1,158 @@
+# Docs checks
+#
+# Runs on every push to a branch other than main:
+#   1. Runs four quality checks in parallel (build + broken links, Markdown lint,
+#      prose style, spelling).
+#   2. Opens a pull request into main if the branch doesn't have one yet.
+#   3. Posts a comment on the pull request saying whether it's ready to merge,
+#      and @mentions the person who pushed, so GitHub sends them a notification.
+#
+# Why one workflow instead of separate "open PR" and "run tests" workflows:
+# GitHub doesn't let a pull request opened by a workflow trigger other workflows,
+# so the checks would never run on an automatically created PR.
+
+name: Docs checks
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - gh-pages
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# If you push again before the checks finish, cancel the older run.
+concurrency:
+  group: docs-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  NODE_VERSION: 24
+  VALE_VERSION: 3.27.0
+
+jobs:
+  build:
+    name: Build and link check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      # The build fails on broken internal links (onBrokenLinks: 'throw' in docusaurus.config.js).
+      - run: npm run build
+
+  markdownlint:
+    name: Markdown lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - run: npm run lint:md
+
+  spelling:
+    name: Spell check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: npm
+      - run: npm ci
+      - run: npm run lint:spelling
+
+  vale:
+    name: Prose style (Vale)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Install Vale
+        run: |
+          curl -sSfL "https://github.com/errata-ai/vale/releases/download/v${VALE_VERSION}/vale_${VALE_VERSION}_Linux_64-bit.tar.gz" \
+            | tar -xz -C "$RUNNER_TEMP" vale
+          echo "$RUNNER_TEMP" >> "$GITHUB_PATH"
+      - name: Download style rules
+        run: vale sync
+      - name: Check prose
+        run: vale --glob='*.{md,mdx}' docs blog src/pages README.md
+
+  pr-status:
+    name: Open PR and report status
+    needs: [build, markdownlint, spelling, vale]
+    # Run even when a check fails (so the comment can report it), but not when cancelled.
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      BRANCH: ${{ github.ref_name }}
+      ACTOR: ${{ github.actor }}
+      RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      BUILD: ${{ needs.build.result }}
+      MARKDOWNLINT: ${{ needs.markdownlint.result }}
+      SPELLING: ${{ needs.spelling.result }}
+      VALE: ${{ needs.vale.result }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Find or open the pull request
+        id: pr
+        run: |
+          PR=$(gh pr list --head "$BRANCH" --base main --state open --json number --jq '.[0].number // empty')
+          if [ -z "$PR" ]; then
+            if [ "$(git rev-list --count origin/main..HEAD)" = "0" ]; then
+              echo "Branch has no new commits compared to main. Skipping."
+              exit 0
+            fi
+            # Use the branch's first commit message as the PR title.
+            TITLE=$(git log --reverse --format=%s origin/main..HEAD | head -n 1)
+            gh pr create --base main --head "$BRANCH" --title "$TITLE" \
+              --body-file .github/pull_request_template.md
+            PR=$(gh pr list --head "$BRANCH" --base main --state open --json number --jq '.[0].number')
+          fi
+          echo "number=$PR" >> "$GITHUB_OUTPUT"
+
+      - name: Comment with check results
+        if: steps.pr.outputs.number != ''
+        env:
+          PR: ${{ steps.pr.outputs.number }}
+        run: |
+          icon() { case "$1" in success) echo "✅ Passed";; failure) echo "❌ Failed";; *) echo "⚪ $1";; esac; }
+          SHA=$(git rev-parse --short HEAD)
+          if [ "$BUILD$MARKDOWNLINT$SPELLING$VALE" = "successsuccesssuccesssuccess" ]; then
+            HEADLINE="✅ **All checks passed. This pull request is ready to merge.**"
+          else
+            HEADLINE="❌ **Some checks failed. Fix them before merging.** [See the details]($RUN_URL)."
+          fi
+          cat > comment.md <<EOF
+          $HEADLINE
+
+          @$ACTOR, results for commit \`$SHA\`:
+
+          | Check | Result |
+          | --- | --- |
+          | Build and link check | $(icon "$BUILD") |
+          | Markdown lint | $(icon "$MARKDOWNLINT") |
+          | Spell check | $(icon "$SPELLING") |
+          | Prose style (Vale) | $(icon "$VALE") |
+
+          [View the full run]($RUN_URL)
+          EOF
+          gh pr comment "$PR" --body-file comment.md
+
+      - name: Fail if any check failed
+        if: needs.build.result != 'success' || needs.markdownlint.result != 'success' || needs.spelling.result != 'success' || needs.vale.result != 'success'
+        run: exit 1
