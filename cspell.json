@@ -1,0 +1,41 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "files": [
+    "**/*.{md,mdx,js,css,json,yml,yaml}"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    "build/**",
+    ".docusaurus/**",
+    "package-lock.json",
+    "static/**"
+  ],
+  "words": [
+    "apos",
+    "Arkestro",
+    "ASML",
+    "barbaramorach",
+    "Canva",
+    "Docusaurus",
+    "Groton",
+    "Holyoke",
+    "Infima",
+    "jsonplaceholder",
+    "markdownlint",
+    "Medica",
+    "microcontent",
+    "Morach",
+    "NERC",
+    "pharma",
+    "Protedyne",
+    "SDLC",
+    "Shoptech",
+    "Signadot",
+    "Snagit",
+    "Wallingford",
+    "WCAG",
+    "ZAGENO",
+    "zombiebadger"
+  ]
+}

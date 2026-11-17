@@ -13,9 +13,9 @@ const config = {
     v4: true,
   },
 
-  // Change these when you choose where to host the site.
+  // GitHub Pages project site: https://zombiebadger0-ct.github.io/Barbara_Portfolio/
   url: 'https://zombiebadger0-ct.github.io',
-  baseUrl: '/',
+  baseUrl: '/Barbara_Portfolio/',
   organizationName: 'zombiebadger0-CT',
   projectName: 'Barbara_Portfolio',
 
