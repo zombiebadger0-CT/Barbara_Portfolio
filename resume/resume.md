@@ -1,5 +1,6 @@
 ---
 title: Resume
+sidebar_position: 2
 description: Resume of Barbara Morach, Product Enablement and Knowledge Base Manager and Senior Technical Writer.
 ---
 
