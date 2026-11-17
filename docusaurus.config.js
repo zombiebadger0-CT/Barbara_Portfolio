@@ -97,8 +97,7 @@ const config = {
           {
             title: 'Connect',
             items: [
-              // Replace with your own profile links.
-              {label: 'LinkedIn', href: 'https://www.linkedin.com/'},
+              {label: 'LinkedIn', href: 'https://www.linkedin.com/in/barbaramorach'},
               {label: 'GitHub', href: 'https://github.com/zombiebadger0-CT/Barbara_Portfolio'},
             ],
           },
