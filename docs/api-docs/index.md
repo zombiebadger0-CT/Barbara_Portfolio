@@ -1,6 +1,5 @@
 ---
 title: API Documentation Samples
-sidebar_label: Overview
 ---
 
 # API Documentation Samples

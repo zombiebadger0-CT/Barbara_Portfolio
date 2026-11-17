@@ -1,7 +1,7 @@
 ---
 title: Docs-as-Code Pipeline
 description: How this site is reviewed, tested, and deployed automatically with GitHub Actions, built with Claude Code.
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 # Docs-as-code pipeline
