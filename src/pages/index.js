@@ -32,12 +32,16 @@ function Banner() {
     <header className={styles.banner}>
       <div className={`container ${styles.bannerInner}`}>
         <div className={styles.bannerText}>
-          <p className={styles.eyebrow}>Technical Writer</p>
+          <p className={styles.eyebrow}>
+            Senior Technical Writer | Product Enablement Content | Knowledge
+            Base Manager
+          </p>
           <Heading as="h1" className={styles.title}>
-            Hi, I&apos;m Barbara.
+            Hi, I&apos;m Barbara Morach.
           </Heading>
           <p className={styles.subtitle}>
-            I turn complex technology into clear, useful documentation.
+            I build and manage AI-enabled, data-driven documentation workflows
+            for regulated and SaaS products.
           </p>
           <div className={styles.buttons}>
             <Link className={styles.primaryButton} to="/portfolio">
