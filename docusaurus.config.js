@@ -102,7 +102,7 @@ const config = {
             ],
           },
         ],
-        copyright: `© ${new Date().getFullYear()} Barbara. All rights reserved.`,
+        copyright: `© 2026 Barbara Morach. All rights reserved.`,
       },
       prism: {
         theme: prismThemes.github,
