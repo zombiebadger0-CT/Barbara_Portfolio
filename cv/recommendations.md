@@ -6,13 +6,15 @@ sidebar_position: 3
 
 # Recommendations
 
+<div className="recommendations-intro">
+
+Read some of the most recent recommendations I received from coworkers across multiple cross-functional teams.
+
 [Read all recommendations](https://www.linkedin.com/in/barbaramorach/details/recommendations/?detailScreenTabIndex=0) on LinkedIn.
 
-## Sam Griffiths
+</div>
 
-Co-Founder, DesignSwift | AI Training & Office Hours | Helping Businesses Automate & Scale with Custom Tooling & AI
-
-_October 28, 2026, Sam worked with Barbara on the same team_
+<figure className="recommendation">
 
 > Barbara is one of the most self-driven people I've worked with. When she owns something, she runs with it.
 >
@@ -22,11 +24,15 @@ _October 28, 2026, Sam worked with Barbara on the same team_
 >
 > What sets her apart is her attitude. I never heard "I can't do that" from Barbara. It was always "let me see what I can do." She's also a genuinely pleasant person to work with. I'd recommend her to any SaaS or hardware team that needs a skilled, dependable writer and editor who can work hands-on with the product.
 
-## Vince Alvarez
+<figcaption>
+  <span className="recommendation__name">Sam Griffiths</span>
+  <span className="recommendation__title">Co-Founder, DesignSwift | AI Training & Office Hours | Helping Businesses Automate & Scale with Custom Tooling & AI</span>
+  <span className="recommendation__meta">October 28, 2026, Sam worked with Barbara on the same team</span>
+</figcaption>
 
-Enterprise AI Deployment & Adoption Leader | Fortune 500 Procurement | Change Management
+</figure>
 
-_November 2, 2026, Vince worked with Barbara but on different teams_
+<figure className="recommendation">
 
 > When a customer needed to understand how something in Arkestro really worked, Barbara was one of the first people I went to. She built and owned our help center, and she could make complex procurement workflows feel simple.
 >
@@ -34,11 +40,15 @@ _November 2, 2026, Vince worked with Barbara but on different teams_
 >
 > Any team building a product people need to understand would be lucky to have her.
 
-## Shannon Kreps
+<figcaption>
+  <span className="recommendation__name">Vince Alvarez</span>
+  <span className="recommendation__title">Enterprise AI Deployment & Adoption Leader | Fortune 500 Procurement | Change Management</span>
+  <span className="recommendation__meta">November 2, 2026, Vince worked with Barbara but on different teams</span>
+</figcaption>
 
-Marketing & Product Leader | Building Teams, Clarifying Complex Products & Creating Demand | Gets Her Hands Dirty
+</figure>
 
-_October 13, 2026, Shannon was senior to Barbara but didn't manage Barbara directly_
+<figure className="recommendation">
 
 > I loved working with Barbara at Arkestro! She was the colleague I could count on to explore every button, field, and workflow AND catch what others missed. As a marketing partner, that gave me tremendous confidence in the accuracy of our content.
 >
@@ -46,11 +56,15 @@ _October 13, 2026, Shannon was senior to Barbara but didn't manage Barbara direc
 >
 > She always looked for better ways to help customers understand and use the product. Meticulous, collaborative, and thoughtful, Barbara made our work better. I'd happily work with her again.
 
-## Anca Tranca Lupitu
+<figcaption>
+  <span className="recommendation__name">Shannon Kreps</span>
+  <span className="recommendation__title">Marketing & Product Leader | Building Teams, Clarifying Complex Products & Creating Demand | Gets Her Hands Dirty</span>
+  <span className="recommendation__meta">October 13, 2026, Shannon was senior to Barbara but didn't manage Barbara directly</span>
+</figcaption>
 
-Support Enablement Lead/ Team manager/Certified trainer/Customer Support/Procurement/Finance
+</figure>
 
-_September 16, 2026, Barbara was senior to Anca but didn't manage Anca directly_
+<figure className="recommendation">
 
 > I've worked with Barbara for the past several months on the Help Center content and product documentation, and I enjoyed our collaboration.
 >
@@ -62,11 +76,15 @@ _September 16, 2026, Barbara was senior to Anca but didn't manage Anca directly_
 >
 > I value Barbara for her high standards, technical depth, and genuine care for people, and I'm glad we had the opportunity to benefit from her guidance.
 
-## Holland Barrett White
+<figcaption>
+  <span className="recommendation__name">Anca Tranca Lupitu</span>
+  <span className="recommendation__title">Support Enablement Lead/ Team manager/Certified trainer/Customer Support/Procurement/Finance</span>
+  <span className="recommendation__meta">September 16, 2026, Barbara was senior to Anca but didn't manage Anca directly</span>
+</figcaption>
 
-AI Delivery | Customer Growth, Enterprise Implementation & Strategic Operations | Former Mayor | Founder
+</figure>
 
-_September 24, 2026, Holland worked with Barbara but on different teams_
+<figure className="recommendation">
 
 > Barbara joined Arkestro as our first technical writer and helped build the foundation for how we understand and explain our product.
 >
@@ -81,3 +99,11 @@ _September 24, 2026, Holland worked with Barbara but on different teams_
 > As AI changes how companies create and deliver product knowledge, I believe Barbara's strengths become even more valuable. AI can generate enormous amounts of content, but organizations still need people who can determine what is accurate, reconcile ambiguity, establish a trusted source of truth, and govern the quality of what those systems produce. Barbara has already demonstrated that capability.
 >
 > I would strongly recommend Barbara to any organization looking for someone who can sit at the intersection of product, knowledge, customer experience, and AI, particularly where clarity, accuracy, and trust matter.
+
+<figcaption>
+  <span className="recommendation__name">Holland Barrett White</span>
+  <span className="recommendation__title">AI Delivery | Customer Growth, Enterprise Implementation & Strategic Operations | Former Mayor | Founder</span>
+  <span className="recommendation__meta">September 24, 2026, Holland worked with Barbara but on different teams</span>
+</figcaption>
+
+</figure>

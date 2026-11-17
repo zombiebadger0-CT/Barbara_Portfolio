@@ -83,7 +83,7 @@ jobs:
       - name: Download style rules
         run: vale sync
       - name: Check prose
-        run: vale --glob='*.{md,mdx}' docs resume blog src/pages README.md
+        run: vale --glob='*.{md,mdx}' docs cv blog src/pages README.md
 
   pr-status:
     name: Open PR and report status

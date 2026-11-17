@@ -57,14 +57,14 @@ const config = {
 
   plugins: [
     [
-      // The Resume section is a second docs section, so it gets its own
+      // The CV section is a second docs section, so it gets its own
       // left sidebar and Previous/Next buttons, like the Portfolio.
       '@docusaurus/plugin-content-docs',
       {
-        id: 'resume',
-        path: 'resume',
-        routeBasePath: 'resume',
-        sidebarPath: './sidebarsResume.js',
+        id: 'cv',
+        path: 'cv',
+        routeBasePath: 'cv',
+        sidebarPath: './sidebarsCV.js',
       },
     ],
   ],
@@ -88,9 +88,9 @@ const config = {
           {to: '/about', label: 'About', position: 'right'},
           {
             type: 'docSidebar',
-            docsPluginId: 'resume',
-            sidebarId: 'resumeSidebar',
-            label: 'Resume',
+            docsPluginId: 'cv',
+            sidebarId: 'cvSidebar',
+            label: 'CV',
             position: 'right',
           },
           {
@@ -109,7 +109,7 @@ const config = {
             title: 'Site',
             items: [
               {label: 'About', to: '/about'},
-              {label: 'Resume', to: '/resume'},
+              {label: 'CV', to: '/cv'},
               {label: 'Portfolio', to: '/portfolio'},
               {label: 'Blog', to: '/blog'},
             ],

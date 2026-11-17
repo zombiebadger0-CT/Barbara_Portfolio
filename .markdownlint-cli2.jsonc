@@ -10,7 +10,7 @@
     // Docusaurus treats the front-matter "title" and the page's "# Heading" as the same
     // title, so only count "#" headings when checking for duplicate top-level headings.
     "MD025": { "front_matter_title": "" },
-    // Italic lines (for example, job dates on the resume) are intentional, not headings.
+    // Italic lines (for example, job dates on the CV) are intentional, not headings.
     "MD036": false,
     // MDX comments like {/* ... */} look like emphasis to markdownlint.
     "MD037": false
