@@ -29,7 +29,7 @@ All of the configuration is public in the [GitHub repository](https://github.com
 | Spell check | [CSpell](https://cspell.org/) | Typos, with a project dictionary for product names and proper nouns |
 | Prose style | [Vale](https://vale.sh/) | Departures from the [Google developer documentation style guide](https://developers.google.com/style) |
 
-Each tool's configuration is tuned for a Docusaurus site. For example, markdownlint treats the front-matter title and the page heading as the same title, and Vale allows en dashes in date ranges. Comments in each configuration file explain why each rule is changed.
+Each tool's configuration is tuned for a Docusaurus site. For example, markdownlint treats the front-matter title and the page heading as the same title, and Vale allows first-person writing ("I" and "my"), which suits a portfolio. Comments in each configuration file explain why each rule is changed.
 
 ## Why it matters
 

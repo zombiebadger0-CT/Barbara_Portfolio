@@ -27,7 +27,7 @@ GenAI / LLM Documentation Workflows • AI-Assisted Codebase Analysis • AI-Ass
 
 ### Senior Technical Writer | Arkestro
 
-_Remote | 09/2022 – 10/2026_
+_Remote | 09/2022–10/2026_
 
 - Designed and executed the organization's GenAI technical writing roadmap, using LLMs to streamline documentation workflows and scale content production.
 - Established documentation KPIs and data-driven audits from Datadog observability data and Intercom reporting and chat conversations, identifying content gaps to improve self-service adoption and ticket deflection.
@@ -41,7 +41,7 @@ _Remote | 09/2022 – 10/2026_
 
 ### Senior Technical Writer | ZAGENO Inc
 
-_Remote | 07/2021 – 06/2022_
+_Remote | 07/2021–06/2022_
 
 - Reshaped release processes around the needs of downstream teams (Sales, Professional Services, Customer Support, Marketing), creating a single source of truth for release enablement through a new communications strategy spanning interactive product demos, pre-release briefs, and patch notes.
 - Collaborated with Product Leadership to deploy standardized specification and ticket templates, improving searchability, tracking, and information reuse across technical teams.
@@ -49,7 +49,7 @@ _Remote | 07/2021 – 06/2022_
 
 ### Senior Technical Writer | ECI Software Solutions/Shoptech
 
-_Remote | 09/2018 – 07/2021_
+_Remote | 09/2018–07/2021_
 
 - Independently led a full audit of 148 MadCap Flare (single-source structured content) online help articles, unifying format and voice and filling information gaps, which increased traffic and reduced support tickets.
 - Routed new online help articles and updates through GitHub for team review, merge, and publication in a docs-as-code process.
@@ -61,7 +61,7 @@ _Remote | 09/2018 – 07/2021_
 
 ### Senior Technical Writer, Contractor | Z-Medica
 
-_Wallingford, CT | 09/2017 – 09/2018_
+_Wallingford, CT | 09/2017–09/2018_
 
 - Audited medical device manufacturing documentation for ISO 13485 and 21 CFR compliance.
 - Transformed complex technical workflows into illustration-led work instructions, improving process repeatability and manufacturing quality for a distributed, multilingual workforce.
@@ -70,14 +70,14 @@ _Wallingford, CT | 09/2017 – 09/2018_
 
 ### Senior Technical Writer, Contractor | ASML
 
-_Wilton, CT | 04/2017 – 09/2017_
+_Wilton, CT | 04/2017–09/2017_
 
 - Created manufacturing build and testing book for precision laser optics module following ISO 9001 standards.
 - Improved the build book logging format, increasing transparency between shifts and playing a key role in identifying a serious quality issue.
 
 ### Senior Customer Technical Trainer | Protedyne / LabCorp
 
-_Windsor, CT | 03/2008 – 01/2017_
+_Windsor, CT | 03/2008–01/2017_
 
 - Developed and delivered training for 2 specialized laboratory automation programs at 9 national sites.
 - Managed ISO 9001-compliant change requests and incident reports in Salesforce.
@@ -85,14 +85,14 @@ _Windsor, CT | 03/2008 – 01/2017_
 
 ### Technical Writer, Contractor | ISO-NE
 
-_Holyoke, MA | 02/2007 – 03/2008_
+_Holyoke, MA | 02/2007–03/2008_
 
 - Created and updated documentation to meet new federal regulations regarding corporate physical and cyber security policies.
 - Built UAT modules around cyber security updates to site authentication software.
 
 ### Lead Technical Writer and Project Coordinator | Pfizer
 
-_Groton, CT | 01/2005 – 01/2007_
+_Groton, CT | 01/2005–01/2007_
 
 - Monitored clinical software product specifications and test plans for 21 CFR compliance.
 - Managed throughput and output standards for a 3-person technical writing team and scaled up an offshore testing team, delivering high-quality SDLC documentation on time and in scope.
