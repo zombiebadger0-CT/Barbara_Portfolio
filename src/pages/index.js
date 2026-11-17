@@ -1,4 +1,5 @@
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
@@ -29,22 +30,31 @@ const sections = [
 function Banner() {
   return (
     <header className={styles.banner}>
-      <div className="container">
-        <p className={styles.eyebrow}>Technical Writer</p>
-        <Heading as="h1" className={styles.title}>
-          Hi, I&apos;m Barbara.
-        </Heading>
-        <p className={styles.subtitle}>
-          I turn complex technology into clear, useful documentation.
-        </p>
-        <div className={styles.buttons}>
-          <Link className={styles.primaryButton} to="/portfolio">
-            View my portfolio
-          </Link>
-          <Link className={styles.secondaryButton} to="/resume">
-            Read my resume
-          </Link>
+      <div className={`container ${styles.bannerInner}`}>
+        <div className={styles.bannerText}>
+          <p className={styles.eyebrow}>Technical Writer</p>
+          <Heading as="h1" className={styles.title}>
+            Hi, I&apos;m Barbara.
+          </Heading>
+          <p className={styles.subtitle}>
+            I turn complex technology into clear, useful documentation.
+          </p>
+          <div className={styles.buttons}>
+            <Link className={styles.primaryButton} to="/portfolio">
+              View my portfolio
+            </Link>
+            <Link className={styles.secondaryButton} to="/resume">
+              Read my resume
+            </Link>
+          </div>
         </div>
+        <img
+          className={styles.headshot}
+          src={useBaseUrl('/img/headshot.jpg')}
+          alt="Barbara Morach"
+          width="320"
+          height="320"
+        />
       </div>
     </header>
   );

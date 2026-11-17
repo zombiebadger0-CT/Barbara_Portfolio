@@ -67,8 +67,8 @@ const config = {
       navbar: {
         title: 'Barbara',
         logo: {
-          alt: 'Barbara logo',
-          src: 'img/logo.svg',
+          alt: 'Barbara Morach',
+          src: 'img/headshot-small.jpg',
         },
         items: [
           {to: '/about', label: 'About', position: 'right'},

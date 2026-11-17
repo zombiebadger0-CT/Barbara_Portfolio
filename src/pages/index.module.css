@@ -2,8 +2,53 @@
 .banner {
   background: linear-gradient(135deg, #165536 0%, #1f7a4d 60%, #289f64 100%);
   color: #ffffff;
-  padding: 6rem 0 5.5rem;
-  text-align: center;
+  padding: 5rem 0 4.5rem;
+}
+
+/* Two columns: text on the left, photo on the right. Stacks on small screens. */
+.bannerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.bannerText {
+  flex: 1;
+  max-width: 38rem;
+}
+
+.headshot {
+  flex-shrink: 0;
+  width: 320px;
+  height: 320px;
+  border: 6px solid #ffffff;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 996px) {
+  .bannerInner {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .headshot {
+    width: 200px;
+    height: 200px;
+    border-width: 5px;
+  }
+
+  .subtitle {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
 }
 
 .eyebrow {
@@ -24,7 +69,7 @@
 
 .subtitle {
   max-width: 36rem;
-  margin: 0 auto 2.25rem;
+  margin: 0 0 2.25rem;
   font-size: 1.25rem;
   opacity: 0.92;
 }
@@ -33,7 +78,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  justify-content: center;
 }
 
 .primaryButton,

@@ -30,6 +30,7 @@ GenAI / LLM Documentation Workflows • AI-Assisted Codebase Analysis • AI-Ass
 _Remote | 09/2022–10/2026_
 
 - Designed and executed the organization's GenAI technical writing roadmap, using LLMs to streamline documentation workflows and scale content production.
+- Used Claude Code to inventory nearly 800 in-app strings (errors, toasts, CTAs, tooltips) by string display location, trigger, and audience, then hand-edited them to establish patterns for Vale-driven automated cleanup and a UI style guide.
 - Established documentation KPIs and data-driven audits from Datadog observability data and Intercom reporting and chat conversations, identifying content gaps to improve self-service adoption and ticket deflection.
 - Won cross-functional buy-in for a feature release management process in Jira and Confluence with formal documentation governance gates, connecting Product, Professional Services, Marketing, and Sales go-to-market goals to shipped functionality.
 - Guided a 3-person cross-functional Customer Success team in structuring knowledge bases and online help for AI-ready search and automated retrieval, owning the workflow and reviewing the output.
