@@ -24,7 +24,7 @@ export default function BuildNotice() {
   return (
     <aside className={styles.notice} aria-label="Site status">
       <p className={styles.text}>
-        I am still building out this portfolio page. Some sections may be
+        <strong className={styles.label}>NOTE:</strong> I am still building out this portfolio page. Some sections may be
         empty, but I am adding new content regularly.{' '}
         <span className={styles.date}>Last updated: {lastUpdated}</span>
       </p>
