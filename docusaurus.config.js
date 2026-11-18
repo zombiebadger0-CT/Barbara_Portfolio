@@ -99,6 +99,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // Link-preview image (social card) shown when the site is shared on
+      // LinkedIn, Slack, and other apps. 1200 x 630 pixels.
+      image: 'img/social-card.png',
+
       // Charcoal, slate, and acid-green theme: light mode only.
       colorMode: {
         defaultMode: 'light',
