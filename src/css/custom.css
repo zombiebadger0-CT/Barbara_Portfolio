@@ -60,6 +60,21 @@
   font-weight: 500;
 }
 
+/* Underline links in page text. Without an underline, the green link color
+   is too close to the dark body text for some readers to tell them apart
+   (WCAG 1.4.1, flagged by the accessibility check). Cards are links too,
+   so leave those alone. */
+.markdown a:not(.card) {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* Page banners with a green background (for example, the blog archive):
+   use white headings so they're readable on the green. */
+.hero--primary {
+  --ifm-heading-color: #ffffff;
+}
+
 /* Footer: light green tint */
 .footer--light {
   border-top: 1px solid var(--site-border);
@@ -124,7 +139,8 @@
 }
 
 .recommendation__meta {
-  color: var(--ifm-color-emphasis-600);
+  /* emphasis-700, not 600: 600 is too light to read (fails the contrast check) */
+  color: var(--ifm-color-emphasis-700);
   font-style: italic;
 }
 
