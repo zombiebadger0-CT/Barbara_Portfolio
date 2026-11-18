@@ -1,8 +1,8 @@
 # Docs checks
 #
 # Runs on every push to a branch other than main:
-#   1. Runs four quality checks in parallel (build + broken links, Markdown lint,
-#      prose style, spelling).
+#   1. Runs five quality checks in parallel (build + broken links, Markdown lint,
+#      prose style, spelling, old URL check).
 #   2. Opens a pull request into main if the branch doesn't have one yet.
 #   3. Posts a comment on the pull request saying whether it's ready to merge,
 #      and @mentions the person who pushed, so GitHub sends them a notification.
@@ -70,6 +70,18 @@ jobs:
       - run: npm ci
       - run: npm run lint:spelling
 
+  old-urls:
+    name: Old URL check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      # Fails if any file still links to the old github.io address instead of
+      # https://barbaramorach.me. Needs no dependencies, so it skips npm ci.
+      - run: node scripts/check-old-urls.mjs
+
   vale:
     name: Prose style (Vale)
     runs-on: ubuntu-latest
@@ -87,7 +99,7 @@ jobs:
 
   pr-status:
     name: Open PR and report status
-    needs: [build, markdownlint, spelling, vale]
+    needs: [build, markdownlint, spelling, vale, old-urls]
     # Run even when a check fails (so the comment can report it), but not when cancelled.
     if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
@@ -103,6 +115,7 @@ jobs:
       MARKDOWNLINT: ${{ needs.markdownlint.result }}
       SPELLING: ${{ needs.spelling.result }}
       VALE: ${{ needs.vale.result }}
+      OLD_URLS: ${{ needs.old-urls.result }}
     steps:
       - uses: actions/checkout@v7
         with:
@@ -132,7 +145,7 @@ jobs:
         run: |
           icon() { case "$1" in success) echo "✅ Passed";; failure) echo "❌ Failed";; *) echo "⚪ $1";; esac; }
           SHA=$(git rev-parse --short HEAD)
-          if [ "$BUILD$MARKDOWNLINT$SPELLING$VALE" = "successsuccesssuccesssuccess" ]; then
+          if [ "$BUILD$MARKDOWNLINT$SPELLING$VALE$OLD_URLS" = "successsuccesssuccesssuccesssuccess" ]; then
             HEADLINE="✅ **All checks passed. This pull request is ready to merge.**"
           else
             HEADLINE="❌ **Some checks failed. Fix them before merging.** [See the details]($RUN_URL)."
@@ -148,11 +161,12 @@ jobs:
           | Markdown lint | $(icon "$MARKDOWNLINT") |
           | Spell check | $(icon "$SPELLING") |
           | Prose style (Vale) | $(icon "$VALE") |
+          | Old URL check | $(icon "$OLD_URLS") |
 
           [View the full run]($RUN_URL)
           EOF
           gh pr comment "$PR" --body-file comment.md
 
       - name: Fail if any check failed
-        if: needs.build.result != 'success' || needs.markdownlint.result != 'success' || needs.spelling.result != 'success' || needs.vale.result != 'success'
+        if: needs.build.result != 'success' || needs.markdownlint.result != 'success' || needs.spelling.result != 'success' || needs.vale.result != 'success' || needs['old-urls'].result != 'success'
         run: exit 1
