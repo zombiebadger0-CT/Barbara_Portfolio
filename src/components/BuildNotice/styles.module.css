@@ -1,0 +1,28 @@
+/* Slim notice above the home page cards: pale acid-green background, with an
+   acid-green border and a stronger left edge to match the cards' top edge. */
+.notice {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--site-acid);
+  border-left: 6px solid var(--site-acid);
+  border-radius: var(--ifm-global-radius);
+  background: #f7ffd9; /* pale tint of Acid Green */
+}
+
+.text {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--site-charcoal);
+}
+
+.label {
+  margin-right: 0.25rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.date {
+  font-weight: 700;
+  white-space: nowrap;
+}

@@ -80,12 +80,6 @@
   letter-spacing: 0.01em;
 }
 
-/* Round headshot in place of a logo */
-.navbar__logo img {
-  border-radius: 50%;
-  border: 2px solid var(--site-acid);
-}
-
 .navbar__link {
   font-weight: 500;
 }
