@@ -49,3 +49,13 @@ npm run lint
 
 If a real word is flagged as misspelled, add it to the `words` list in
 `cspell.json`.
+
+To run the accessibility check locally (requires Google Chrome):
+
+```bash
+npm run build
+npm run test:a11y
+```
+
+It tests every page in the sitemap against WCAG 2.1 AA. Settings are in
+`.pa11yci.json`.

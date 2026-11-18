@@ -1,0 +1,11 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "runners": ["axe"],
+    "levelCapWhenNeedsReview": "warning",
+    "timeout": 60000,
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox"]
+    }
+  }
+}
