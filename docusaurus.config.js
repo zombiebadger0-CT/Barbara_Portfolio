@@ -1,7 +1,24 @@
 // @ts-check
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
+import {execSync} from 'node:child_process';
 import {themes as prismThemes} from 'prism-react-renderer';
+
+// Date of the latest commit on the branch being built. On main, that is the
+// latest merged pull request. Used by the "still building" notice on the home page.
+function lastUpdatedDate() {
+  try {
+    return execSync("git log -1 --format=%cd --date=format:'%B %-d, %Y'")
+      .toString()
+      .trim();
+  } catch {
+    return new Date().toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
+  }
+}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -11,6 +28,14 @@ const config = {
 
   future: {
     v4: true,
+  },
+
+  customFields: {
+    // Temporary "still building" notice on the home page.
+    // To hide it, change true to false. To delete it for good, see
+    // src/components/BuildNotice/index.js.
+    showBuildNotice: true,
+    lastUpdated: lastUpdatedDate(),
   },
 
   // GitHub Pages site served from the custom domain https://barbaramorach.me/
@@ -81,10 +106,10 @@ const config = {
       },
       navbar: {
         style: 'dark',
-        title: 'Barbara',
+        title: 'Portfolio Home',
         logo: {
-          alt: 'Barbara Morach',
-          src: 'img/headshot-small.jpg',
+          alt: 'Barbara Morach monogram',
+          src: 'img/logo.svg',
         },
         items: [
           {to: '/about', label: 'About', position: 'right'},

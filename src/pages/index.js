@@ -2,6 +2,7 @@ import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
+import BuildNotice from '@site/src/components/BuildNotice';
 import styles from './index.module.css';
 
 const sections = [
@@ -68,6 +69,7 @@ function SectionCards() {
   return (
     <section className={styles.sections}>
       <div className="container">
+        <BuildNotice />
         <div className={styles.grid}>
           {sections.map(({title, to, text}) => (
             <Link key={title} to={to} className={styles.card}>
