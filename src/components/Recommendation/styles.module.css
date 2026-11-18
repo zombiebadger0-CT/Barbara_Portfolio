@@ -1,0 +1,131 @@
+/* Recommendation card: team pill, bold pull-quote headline, shortened quote,
+   then the attribution. Colors come from the palette tokens in custom.css. */
+
+.card {
+  margin: 0 0 1.5rem;
+  padding: 1.5rem 1.75rem;
+  background: var(--site-surface);
+  border: 1px solid var(--site-border);
+  border-left: 4px solid var(--site-acid);
+  border-radius: var(--ifm-global-radius);
+}
+
+/* Team pill. Every tint is light and the text is Deep Charcoal,
+   so the label passes WCAG AA contrast on all of them. */
+.team {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  color: var(--site-charcoal);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--site-tint);
+}
+
+.teamProduct { background: #e9f7c2; }
+.teamServices { background: #dfe9f5; }
+.teamUx { background: #ebe4f6; }
+.teamMarketing { background: #fae6d8; }
+.teamSupport { background: #d9f1ec; }
+.teamQa { background: #f6efcc; }
+
+.headline {
+  margin: 0 0 0.75rem;
+  color: var(--ifm-heading-color);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* The quote itself: smaller than the headline, no extra blockquote styling */
+.body {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--ifm-font-color-base);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.body p {
+  margin-bottom: 0.85rem;
+}
+
+.body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Shortened view: about four lines, fading out at the bottom */
+.collapsed {
+  max-height: calc(1.7em * 4);
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent);
+  mask-image: linear-gradient(to bottom, #000 55%, transparent);
+}
+
+.toggle {
+  margin-top: 0.5rem;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--ifm-color-primary);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--site-cool-gray);
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
+.toggle:hover {
+  background: var(--site-acid);
+  color: var(--site-charcoal);
+}
+
+.toggle:focus-visible {
+  outline: 2px solid var(--site-slate);
+  outline-offset: 2px;
+}
+
+.caption {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--site-border);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.name,
+.title,
+.meta {
+  display: block;
+}
+
+.name {
+  font-weight: 600;
+  color: var(--ifm-heading-color);
+}
+
+.title {
+  color: var(--site-slate);
+}
+
+.meta {
+  color: var(--site-cool-gray-text);
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1.25rem;
+  }
+
+  .headline {
+    font-size: 1.15rem;
+  }
+}
