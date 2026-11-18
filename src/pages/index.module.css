@@ -1,6 +1,9 @@
 /* Homepage banner */
 .banner {
-  background: linear-gradient(135deg, #165536 0%, #1f7a4d 60%, #289f64 100%);
+  /* Charcoal-to-slate gradient with an acid-green glow on the right */
+  background:
+    radial-gradient(circle at 100% 30%, rgba(198, 255, 0, 0.35) 0%, rgba(198, 255, 0, 0) 45%),
+    linear-gradient(135deg, #0b0f14 0%, #141c26 45%, #243447 100%);
   color: #ffffff;
   padding: 5rem 0 4.5rem;
 }
@@ -22,10 +25,10 @@
   flex-shrink: 0;
   width: 320px;
   height: 320px;
-  border: 6px solid #ffffff;
+  border: 6px solid var(--site-acid);
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 16px 48px rgba(198, 255, 0, 0.25);
 }
 
 @media (max-width: 996px) {
@@ -57,7 +60,7 @@
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  opacity: 0.85;
+  color: var(--site-acid);
 }
 
 .title {
@@ -91,13 +94,15 @@
 }
 
 .primaryButton {
-  background: #ffffff;
-  color: var(--ifm-color-primary-darkest);
+  border-color: var(--site-acid);
+  background: var(--site-acid);
+  color: var(--site-charcoal);
 }
 
 .primaryButton:hover {
-  background: var(--site-green-tint);
-  color: var(--ifm-color-primary-darkest);
+  border-color: #ffffff;
+  background: #ffffff;
+  color: var(--site-charcoal);
   text-decoration: none;
 }
 
@@ -128,9 +133,9 @@
   flex-direction: column;
   padding: 1.75rem;
   border: 1px solid var(--site-border);
-  border-top: 4px solid var(--ifm-color-primary);
+  border-top: 4px solid var(--site-acid);
   border-radius: var(--ifm-global-radius);
-  background: #ffffff;
+  background: var(--site-surface);
   color: inherit;
   transition: box-shadow 0.15s ease, transform 0.15s ease;
 }
@@ -138,7 +143,7 @@
 .card:hover {
   color: inherit;
   text-decoration: none;
-  box-shadow: 0 8px 24px rgba(22, 85, 54, 0.12);
+  box-shadow: 0 8px 24px rgba(36, 52, 71, 0.15);
   transform: translateY(-2px);
 }
 
@@ -150,10 +155,10 @@
 .cardText {
   flex: 1;
   margin-bottom: 1.25rem;
-  color: #4a5a51;
+  color: var(--site-cool-gray-text);
 }
 
 .cardLink {
-  color: var(--ifm-color-primary);
+  color: var(--site-slate);
   font-weight: 600;
 }

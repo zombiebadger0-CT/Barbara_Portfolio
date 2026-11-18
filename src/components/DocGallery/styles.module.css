@@ -23,7 +23,7 @@
 
 .card:hover,
 .card:focus-visible {
-  box-shadow: 0 8px 24px rgba(22, 85, 54, 0.15);
+  box-shadow: 0 8px 24px rgba(36, 52, 71, 0.15);
   transform: translateY(-2px);
 }
 
@@ -36,7 +36,7 @@
   display: block;
   aspect-ratio: 8.5 / 11;
   padding: 1rem;
-  background: var(--site-green-tint);
+  background: var(--site-tint);
   border-bottom: 1px solid var(--site-border);
 }
 
@@ -61,7 +61,7 @@
 .cardText {
   padding: 0 1rem;
   font-size: 0.9rem;
-  color: #4a5a51;
+  color: var(--site-cool-gray-text);
 }
 
 .cardMeta {
@@ -79,7 +79,7 @@
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  background: rgba(20, 24, 22, 0.94);
+  background: rgba(11, 15, 20, 0.94);
 }
 
 .toolbar {
@@ -88,7 +88,8 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 0.6rem 1rem;
-  background: #1c221f;
+  background: var(--site-charcoal);
+  border-bottom: 2px solid var(--site-acid);
   color: #ffffff;
 }
 
@@ -127,7 +128,8 @@
 
 .navBtn:hover:not(:disabled),
 .closeBtn:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: var(--site-acid);
+  color: var(--site-charcoal);
 }
 
 .navBtn:disabled {
