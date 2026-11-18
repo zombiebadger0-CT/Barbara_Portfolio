@@ -59,3 +59,14 @@ npm run test:a11y
 
 It tests every page in the sitemap against WCAG 2.1 AA. Settings are in
 `.pa11yci.json`.
+
+## Clean up merged branches
+
+GitHub deletes a branch after its pull request is merged, but your local copy
+stays. To remove every local branch that's already merged into `main`:
+
+```bash
+npm run clean:branches
+```
+
+It never deletes `main`, the branch you're on, or a branch with unmerged work.

@@ -16,7 +16,8 @@
     "lint:spelling": "cspell --no-progress",
     "lint:urls": "node scripts/check-old-urls.mjs",
     "lint": "npm run lint:md && npm run lint:spelling && npm run lint:urls",
-    "test:a11y": "node scripts/check-accessibility.mjs"
+    "test:a11y": "node scripts/check-accessibility.mjs",
+    "clean:branches": "node scripts/clean-branches.mjs"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",
