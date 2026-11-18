@@ -22,8 +22,9 @@ function lastUpdatedDate() {
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Barbara',
-  tagline: 'Technical Writer',
+  title: 'Barbara Morach Portfolio',
+  tagline:
+    'Senior Technical Writer | Product Enablement Content | Knowledge Base Manager',
   favicon: 'img/logo.svg',
 
   future: {

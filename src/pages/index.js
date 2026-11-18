@@ -90,9 +90,7 @@ function SectionCards() {
 
 export default function Home() {
   return (
-    <Layout
-      title="Technical Writer"
-      description="Portfolio of Barbara, technical writer.">
+    <Layout description="Senior Technical Writer | Product Enablement Content | Knowledge Base Manager">
       <Banner />
       <main>
         <SectionCards />
