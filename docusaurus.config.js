@@ -73,13 +73,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Green-and-white theme: light mode only.
+      // Charcoal, slate, and acid-green theme: light mode only.
       colorMode: {
         defaultMode: 'light',
         disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       navbar: {
+        style: 'dark',
         title: 'Barbara',
         logo: {
           alt: 'Barbara Morach',
@@ -104,7 +105,7 @@ const config = {
         ],
       },
       footer: {
-        style: 'light',
+        style: 'dark',
         links: [
           {
             title: 'Site',
