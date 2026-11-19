@@ -1,5 +1,6 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import useBrokenLinks from '@docusaurus/useBrokenLinks';
 import styles from './styles.module.css';
 
 /**
@@ -141,6 +142,31 @@ export default function DocGallery({docs}) {
   const base = useBaseUrl('/printed-docs');
   const [open, setOpen] = useState(null);
 
+  // Tell the build's broken-link check that #<doc id> links on this page are valid.
+  const brokenLinks = useBrokenLinks();
+  docs.forEach((doc) => brokenLinks.collectAnchor(doc.id));
+
+  // Open a doc when the URL hash matches its id, so text links like
+  // [First Draft](#first-draft) open that doc in the viewer.
+  useEffect(() => {
+    const openFromHash = () => {
+      const id = decodeURIComponent(window.location.hash.slice(1));
+      const match = docs.find((doc) => doc.id === id);
+      if (match) setOpen(match);
+    };
+    openFromHash();
+    window.addEventListener('hashchange', openFromHash);
+    return () => window.removeEventListener('hashchange', openFromHash);
+  }, [docs]);
+
+  // Clear the hash on close, so the same link works again.
+  const close = useCallback(() => {
+    setOpen(null);
+    if (docs.some((doc) => `#${doc.id}` === window.location.hash)) {
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+  }, [docs]);
+
   return (
     <>
       <div className={styles.grid}>
@@ -168,7 +194,7 @@ export default function DocGallery({docs}) {
           </button>
         ))}
       </div>
-      {open && <Viewer doc={open} base={base} onClose={() => setOpen(null)} />}
+      {open && <Viewer doc={open} base={base} onClose={close} />}
     </>
   );
 }
