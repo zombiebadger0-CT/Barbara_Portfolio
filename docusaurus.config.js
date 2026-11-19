@@ -111,7 +111,7 @@ const config = {
       },
       navbar: {
         style: 'dark',
-        title: 'Portfolio Home',
+        title: 'Barbara Morach Home',
         logo: {
           alt: 'Barbara Morach monogram',
           src: 'img/logo.svg',
