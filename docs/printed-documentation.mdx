@@ -8,9 +8,24 @@ import DocGallery from '@site/src/components/DocGallery';
 
 # Printed Documentation
 
-These manuals and posters, examples of documentation formatted for print, were developed for Propel, a large-scale automated clinical specimen processing system manufactured by Protedyne for Labcorp. As Senior Technical Trainer and Writer, I developed the documentation through hands-on operation of the system, independent research of its functionality and error conditions, review of engineering drawings and design specifications, and collaboration with hardware, electrical, and software engineers.
+## Print Documentation for Clinical Robotics
 
-Although the documentation was also published as online help, Labcorp required printed manuals at each installation. In practice, the printed guides remained essential reference tools for laboratory staff, particularly when troubleshooting equipment or resolving issues in the middle of an operation. The system was deployed at nine locations, each with a unique physical configuration and processing capacity. I used a single-sourcing approach to manage shared content while maintaining site-specific variations through reusable snippets, producing tailored documentation for each installation while ensuring consistency across all nine sites.
+**The project:** Protedyne built Propel, a large-scale robotic system that automates clinical specimen processing, for LabCorp. As senior technical trainer and writer, I wrote the system’s user manuals.
+
+**Research:**
+
+- Ran the system myself and learned it from end to end, including every error message and how to fix it.
+- Studied the CAD drawings and design specs and integrated the information into the documentation.
+- Interviewed the hardware, electrical, and software engineers.
+
+**Writing for different roles:** I wrote two manuals for two groups of users:
+
+- **Operators:** A user guide for everyone who loaded and unloaded the Propel system.
+- **Super users:** A second guide for a smaller group I trained to handle advanced error recovery. Protedyne technicians were not on site during weekend runs, so these super users needed to know how to use emergency release mechanisms, clear jams, and take a failing device offline without stopping the run.
+
+**One source, nine versions:** Propel was installed at nine sites. Each site had a different layout, based on its space and how many specimens it processed a night (10,000 to 200,000). So each site needed its own version of the manual. I used manually applied DITA rules for structured authoring and single-sourcing to manage the shared content and wrote site-specific snippets for the differences.
+
+**Why print still mattered:** LabCorp required printed manuals for all its equipment. The same content was also online, but the printed guides were the ones people used. At every site they were dog-eared and full of sticky flags. If you’re leaning into the decapper to clear a jam, a book is easier to work from than a tablet.
 
 <DocGallery
   docs={[
