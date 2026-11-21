@@ -1,8 +1,8 @@
 ---
-title: API Documentation Samples
+title: API documentation samples
 ---
 
-# API Documentation Samples
+# API documentation samples
 
 These samples show how I document REST APIs: endpoint references, request and response examples, parameters, and error handling.
 

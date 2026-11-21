@@ -1,4 +1,4 @@
-# Barbara's Portfolio
+# Barbara's portfolio
 
 My technical writing portfolio, built with [Docusaurus](https://docusaurus.io/).
 

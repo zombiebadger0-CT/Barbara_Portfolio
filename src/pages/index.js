@@ -12,7 +12,7 @@ const sections = [
     text: 'Who I am, how I work, and what I care about in documentation.',
   },
   {
-    title: 'CV and Recommendations',
+    title: 'CV and recommendations',
     to: '/cv',
     text: 'My experience, skills, and tools, and coworker recommendations pulled from LinkedIn.',
   },
