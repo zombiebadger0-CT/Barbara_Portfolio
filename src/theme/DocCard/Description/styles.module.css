@@ -1,0 +1,41 @@
+.wrapper {
+  position: relative;
+}
+
+/* Show up to 2 lines, then end with "..." */
+.cardDescription {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+/* Full text, shown only when the description is cut off */
+.tooltip {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background: var(--site-slate);
+  color: #ffffff;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  box-shadow: 0 3px 8px rgb(0 0 0 / 25%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+}
+
+/* Show the tooltip when hovering the card or tabbing to it with the keyboard */
+:global(.theme-doc-card-container):hover .tooltip,
+:global(.theme-doc-card-container):focus-visible .tooltip {
+  opacity: 1;
+  visibility: visible;
+}

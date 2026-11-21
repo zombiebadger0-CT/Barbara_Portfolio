@@ -132,6 +132,14 @@ const config = {
             position: 'right',
           },
           {to: '/blog', label: 'Blog', position: 'right'},
+          {
+            href: 'https://github.com/zombiebadger0-CT/Barbara_Portfolio',
+            label: 'GitHub Repo',
+            position: 'right',
+            className: 'github-repo-link',
+            'data-tooltip':
+              "Tour the GitHub repository for this webpage's code and content.",
+          },
         ],
       },
       footer: {
@@ -150,7 +158,13 @@ const config = {
             title: 'Connect',
             items: [
               {label: 'LinkedIn', href: 'https://www.linkedin.com/in/barbaramorach'},
-              {label: 'GitHub', href: 'https://github.com/zombiebadger0-CT/Barbara_Portfolio'},
+              {
+                label: 'GitHub Repo',
+                href: 'https://github.com/zombiebadger0-CT/Barbara_Portfolio',
+                className: 'github-repo-link',
+                'data-tooltip':
+                  "Tour the GitHub repository for this webpage's code and content.",
+              },
             ],
           },
         ],
