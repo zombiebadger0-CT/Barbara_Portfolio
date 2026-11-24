@@ -2,16 +2,6 @@
 
 Guidance for Claude Code when working in this repository.
 
-## About the user
-
-- The user is a **technical writer, not a software engineer**.
-- Give instructions that are **detailed and easy to follow**:
-  - Number the steps and do one thing per step.
-  - Show the exact command to run and say where to run it (for example, "in the VS Code terminal, from the project folder").
-  - Explain briefly what each command does and what a successful result looks like.
-  - Define technical terms the first time you use them (for example, "branch", "pull request", "CI").
-  - Say what to do if something goes wrong.
-
 ## Purpose of this project
 
 - This repository is a **Docusaurus portfolio website**.
@@ -37,9 +27,3 @@ Guidance for Claude Code when working in this repository.
   - Frontmatter `title:` and `sidebar_label:` values. Vale doesn't check these, so fix them by hand.
   - Headings and card titles in React pages and components (for example, `src/pages/index.js`).
 - Keep proper nouns capitalized (names, companies, products such as GitHub, Docusaurus, Pfizer). If Vale flags a proper noun, add it to `.github/styles/config/vocabularies/Portfolio/accept.txt` instead of lowercasing it.
-
-## Be proactive with suggestions
-
-- The user will not always know what to ask for, or that something is missing.
-- **Suggest next steps and point out gaps** (for example, missing tests, missing deployment, accessibility issues, broken links, or portfolio content that would impress recruiters).
-- When you suggest something, explain why it matters for a docs-as-code portfolio, then ask before making large changes.
